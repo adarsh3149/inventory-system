@@ -34,7 +34,7 @@ st.title("📦 Electronics Inventory Management System")
 menu = ["Add Product", "Update Quantity", "View Inventory", "Calculate Total Value", "Search Product"]
 choice = st.sidebar.selectbox("Choose Action", menu)
 
-if collection:
+if collection is not None:
     if choice == "Add Product":
         st.subheader("➕ Add New Product")
         product_id = st.text_input("Product ID")
